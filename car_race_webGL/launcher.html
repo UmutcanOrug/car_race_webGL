@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example GameObjects Application</title>
+    <script
+      type="text/javascript"
+      src="webgl-utils.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="MV.js"
+    ></script>
+    <script type="text/javascript" src="game.js"></script>
+    <h1 id="demo"></h1>
+    <script>
+        
+        
+        function refreshPage(){
+        window.location.reload();
+} 
+        </script>
+        
+        <script>
+          function myFunction() {
+            var txt;
+            if (confirm("Play Again?")) {
+              refreshPage();
+              txt = "Loading..."
+            } else {
+              txt = "GG... YOU CAN WATCH PASSING CARS FOREVER <3";
+            }
+            document.getElementById("demo").innerHTML = txt;
+          }
+        </script>
+        
+        <div id="test">
+        </div>
+  </head>
+
+  <body bgcolor="white">
+    <table>
+      <tr>
+        <td>
+          <canvas id="game_canvas" width="1080" height="720">
+            This browser does not support canvas element!
+          </canvas>
+          
+        </td>
+        
+      </tr>
+    </table>
+  </body>
+</html>
